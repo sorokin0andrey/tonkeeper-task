@@ -1,4 +1,4 @@
-import React, { FC, Fragment, memo } from 'react'
+import React, { FC, memo } from 'react'
 import { View } from 'react-native'
 
 import Text from '../../../../components/Text'

@@ -61,6 +61,7 @@ const BottomSheet: ForwardRefRenderFunction<BottomSheetRef, Props> = (props, ref
       onClosed={onClosed}
       modalStyle={styles.modalStyle}
       scrollViewProps={{ showsVerticalScrollIndicator: false }}
+      panGestureComponentEnabled={true}
     >
       {children}
     </Modalize>

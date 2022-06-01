@@ -1,7 +1,8 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack'
 import React, { FC } from 'react'
-import { gestureHandlerRootHOC } from 'react-native-gesture-handler'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
+import { StyleSheet } from 'react-native'
 
 import HomeScreen from './screens/HomeScreen'
 import ConfirmScreen from './screens/ConfirmScreen'
@@ -16,13 +17,21 @@ const options: NativeStackNavigationOptions = {
   presentation: 'transparentModal',
 }
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+})
+
 const App: FC = () => (
-  <NavigationContainer>
-    <Stack.Navigator screenOptions={options}>
-      <Stack.Screen name='Home' component={HomeScreen} />
-      <Stack.Screen name='Sheet' component={ConfirmScreen} />
-    </Stack.Navigator>
-  </NavigationContainer>
+  <GestureHandlerRootView style={styles.container}>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={options}>
+        <Stack.Screen name='Home' component={HomeScreen} />
+        <Stack.Screen name='Sheet' component={ConfirmScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  </GestureHandlerRootView>
 )
 
-export default gestureHandlerRootHOC(App)
+export default App

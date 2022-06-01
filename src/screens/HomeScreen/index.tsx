@@ -19,7 +19,7 @@ const HomeScreen: FC<Props> = (props) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar barStyle='light-content' />
+      <StatusBar barStyle='light-content' backgroundColor='#11151E' />
       <Button title='Open sheet' variant='secondary' onPress={openSheet} />
     </SafeAreaView>
   )
