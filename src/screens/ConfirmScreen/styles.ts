@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   footerContainer: {
     flexDirection: 'row',
     paddingHorizontal: 14,
+    paddingTop: 8,
     paddingBottom: 16,
   },
   footerItem: {
