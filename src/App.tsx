@@ -1,6 +1,7 @@
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack'
 import React, { FC } from 'react'
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler'
 
 import HomeScreen from './screens/HomeScreen'
 import ConfirmScreen from './screens/ConfirmScreen'
@@ -24,4 +25,4 @@ const App: FC = () => (
   </NavigationContainer>
 )
 
-export default App
+export default gestureHandlerRootHOC(App)
